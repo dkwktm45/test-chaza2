@@ -4,11 +4,9 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git branch: 'main', credentialsId: "LeeJin-token" ,url: 'https://github.com/dkwktm45/test-chaza'
+                git branch: 'main', credentialsId: "LeeJin-token" ,url: 'https://github.com/dkwktm45/test-chaza2'
 
                 script {
-                    // Use the Gradle Wrapper if your project uses Gradle
-
                     sh './gradlew build -x test'
                 }
             }
@@ -18,7 +16,6 @@ pipeline {
             steps {
                 echo 'Running tests...'
                 script {
-                    // Use the Gradle Wrapper if your project uses Gradle
                     sh './gradlew test'
                 }
             }
