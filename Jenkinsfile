@@ -25,7 +25,7 @@ pipeline {
         stage('Archive') {
             steps {
                 echo 'Archiving the build artifacts...'
-                archiveArtifacts artifacts: '/build/libs/chaza-0.0.1-SNAPSHOT.jar', fingerprint: true
+                archiveArtifacts artifacts: 'build/libs/chaza-0.0.1-SNAPSHOT.jar', fingerprint: true
             }
         }
     }
